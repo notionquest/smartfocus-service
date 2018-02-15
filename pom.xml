@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.smartfocus</groupId>
-    <artifactId>test-nitesh</artifactId>
+    <artifactId>test-smartfocus</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -68,11 +68,21 @@
             <version>1.7.5</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.3.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.5.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
     <build>
-        <finalName>test-nitesh</finalName>
+        <finalName>test-smartfocus</finalName>
         <plugins>
 <!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
