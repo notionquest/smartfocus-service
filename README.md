@@ -3,8 +3,8 @@
 # test-radhika
 
 Design and implement a RESTful API for any one endpoint form the following list.
-1) List down all users 
-2) Fetch the requested user 
+* List down all users 
+* Fetch the requested user 
 3) Create a user 
 	Request Body { "id": 12345, "Name": "Radhika"}
 4) Update a user
