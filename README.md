@@ -2,6 +2,20 @@
 
 Design and implement a RESTful API for any one endpoint form the following list.
 ## 1) List down all users
+
+```json
+[
+    {
+        "userId": 1,
+        "name": "Test1"
+    },
+    {
+        "userId": 2,
+        "name": "Test 2"
+    }
+]
+```json
+
 ## 2) Fetch the requested user
 ## 3) Create a user Request Body { "id": 12345, "Name": "Radhika"}
 ## 4) Update a user
