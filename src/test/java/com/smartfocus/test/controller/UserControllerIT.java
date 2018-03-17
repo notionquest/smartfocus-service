@@ -20,7 +20,7 @@ import static org.assertj.core.api.BDDAssertions.then;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SmartFocusApp.class)
 @TestPropertySource(properties = {"management.port=0"})
-public class UserControllerIntegrationTest {
+public class UserControllerIT {
 
     @LocalServerPort
     private int port;

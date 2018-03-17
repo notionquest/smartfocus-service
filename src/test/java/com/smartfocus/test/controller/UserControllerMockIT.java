@@ -20,7 +20,7 @@ import static org.mockito.BDDMockito.given;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SmartFocusApp.class)
 @TestPropertySource(properties = {"management.port=0"})
-public class UserControllerMockIntegrationTest {
+public class UserControllerMockIT {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
