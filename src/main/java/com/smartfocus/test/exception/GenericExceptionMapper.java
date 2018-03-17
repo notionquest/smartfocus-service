@@ -1,18 +1,28 @@
 package com.smartfocus.test.exception;
 
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
-import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.smartfocus.test.model.ErrorMessage;
+@ControllerAdvice
+public class GenericExceptionMapper extends ResponseEntityExceptionHandler {
 
-@Provider
-public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
+	@ExceptionHandler(value = {IllegalArgumentException.class})
+	protected ResponseEntity<Object> handleConflict(RuntimeException ex, WebRequest request) {
+		String bodyOfResponse = "Input arguments are not valid";
+		return handleExceptionInternal(ex, bodyOfResponse,
+				new HttpHeaders(), HttpStatus.CONFLICT, request);
+	}
 
-	public Response toResponse(Throwable ex) {
-		ErrorMessage errorMessage = new ErrorMessage(ex.getMessage(), 500);
-		return Response.status(Status.INTERNAL_SERVER_ERROR).entity(errorMessage).build();
+	@ExceptionHandler(value = {UserNotFoundException.class})
+	protected ResponseEntity<Object> userNotFound(RuntimeException ex, WebRequest request) {
+		String bodyOfResponse = "User not found";
+		return handleExceptionInternal(ex, bodyOfResponse,
+				new HttpHeaders(), HttpStatus.NO_CONTENT, request);
 	}
 
 }

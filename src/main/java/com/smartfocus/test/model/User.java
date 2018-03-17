@@ -1,13 +1,10 @@
 package com.smartfocus.test.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
 /**
  * User POJO
  *
- * @author nitesh
+ * @author
  */
-@XmlRootElement
 public class User {
 
 	private long userId;
