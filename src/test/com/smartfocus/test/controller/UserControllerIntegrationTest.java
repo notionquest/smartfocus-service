@@ -1,4 +1,4 @@
-package com.smartfocus.test.controller;
+package smartfocus.test.controller;
 
 import com.smartfocus.test.SmartFocusApp;
 import com.smartfocus.test.model.User;
@@ -20,7 +20,8 @@ import static org.assertj.core.api.BDDAssertions.then;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = SmartFocusApp.class)
 @TestPropertySource(properties = {"management.port=0"})
-public class UserControllerTest {
+public class UserControllerIntegrationTest {
+
     @LocalServerPort
     private int port;
 

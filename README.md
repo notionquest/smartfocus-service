@@ -14,7 +14,7 @@ Design and implement a RESTful API for any one endpoint form the following list.
         "name": "Test 2"
     }
 ]
-```json
+```
 
 ## 2) Fetch the requested user
 ## 3) Create a user Request Body { "id": 12345, "Name": "Radhika"}
